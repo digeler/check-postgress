@@ -3,7 +3,6 @@ package main
 import (
 	"database/sql"
 	"fmt"
-	"log"
 	"os"
 	"time"
 
@@ -25,16 +24,18 @@ func main() {
 
 		db, err := sql.Open("postgres", psqlInfo)
 		if err != nil {
-			log.Println(err)
+			fmt.Println(err)
+
 		}
 		defer db.Close()
 
 		err = db.Ping()
 		if err != nil {
-			log.Println(err)
+			fmt.Println(err)
+			//log.Fatal("failed db connection")
 		}
 
-		fmt.Println("Successfully connected!  ", time.Now().UTC())
+		fmt.Println("real error ", err, time.Now().UTC())
 
 		time.Sleep(2 * time.Second)
 	}

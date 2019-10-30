@@ -1,11 +1,11 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: extensions/v1beta1
+kind: DaemonSet
 metadata:
   name: psgress-test
   labels:
     app: psgress-test
 spec:
-  replicas: 1
+  
   selector:
     matchLabels:
       app: psgress-test
@@ -16,17 +16,21 @@ spec:
     spec:
       containers:
       - name:  psgress  
-        image: dinorg/psgress:v2
-        command: ["/ps/run.sh"]
+        image: dinorg/psgress1      
         env:
          - name: host
-           value: ""  # yourdbnam
+           value: "dinor.test"  # yourdbnam
          - name: user
-           value: "" # your username
+           value: "djdjdj" # your username
          - name: password
-           value: "" #password 
+           value: "fdfdfdf" #password 
          - name: dbname
-           value: "" #dbname  
+           value: "dfdfdf" #dbname  
+         - name: HOSTNAME
+           valueFrom:
+             fieldRef:
+               apiVersion: v1
+               fieldPath: spec.nodeName 
         volumeMounts:
         - name: azure
           mountPath: /var/logs/pslogs
