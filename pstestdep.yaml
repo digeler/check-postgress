@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: psgress-test
+  labels:
+    app: psgress-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: psgress-test
+  template:
+    metadata:
+      labels:
+        app: psgress-test
+    spec:
+      containers:
+      - name:  psgress  
+        image: dinorg/psgress:v2
+        command: ["/ps/run.sh"]
+        env:
+         - name: host
+           value: ""  # yourdbnam
+         - name: user
+           value: "" # your username
+         - name: password
+           value: "" #password 
+         - name: dbname
+           value: "" #dbname  
+        volumeMounts:
+        - name: azure
+          mountPath: /var/logs/pslogs
+      volumes:
+      - name: azure
+        persistentVolumeClaim:
+          claimName: azurefile
+       
+      
