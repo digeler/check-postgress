@@ -16,26 +16,26 @@ run the file after you edit the settings pstestdep.yaml
            once done it will run connectivity tests for every 2 sec 
            
            the output will be in the pv file :
+           root@psgress-test-74jgq:/var/logs/pslogs# tail -f  aks-agentpool-35064155-0.txt 
+dial tcp: lookup dinor.test on 10.0.0.10:53: no such host
+real error  dial tcp: lookup dinor.test on 10.0.0.10:53: no such host 2019-10-30 18:01:55.46939178 +0000 UTC
+dial tcp: lookup dinor.test on 10.0.0.10:53: no such host
+real error  dial tcp: lookup dinor.test on 10.0.0.10:53: no such host 2019-10-30 18:01:57.474532921 +0000 UTC
+dial tcp: lookup dinor.test on 10.0.0.10:53: no such host
+real error  dial tcp: lookup dinor.test on 10.0.0.10:53: no such host 2019-10-30 18:01:59.476610046 +0000 UTC
+dial tcp: lookup dinor.test on 10.0.0.10:53: no such host
+real error  dial tcp: lookup dinor.test on 10.0.0.10:53: no such host 2019-10-30 18:02:01.481702787 +0000 UTC
+dial tcp: lookup dinor.test on 10.0.0.10:53: no such host
+real error  dial tcp: lookup dinor.test on 10.0.0.10:53: no such host 2019-10-30 18:02:03.483729612 +0000 UTC
+dial tcp: lookup dinor.test on 10.0.0.10:53: no such host
+real error  dial tcp: lookup dinor.test on 10.0.0.10:53: no such host 2019-10-30 18:02:05.488764252 +0000 UTC
+dial tcp: lookup dinor.test on 10.0.0.10:53: no such host
+real error  dial tcp: lookup dinor.test on 10.0.0.10:53: no such host 2019-10-30 18:02:07.496066804 +0000 UTC
+dial tcp: lookup dinor.test on 10.0.0.10:53: no such host
+real error  dial tcp: lookup dinor.test on 10.0.0.10:53: no such host 2019-10-30 18:02:09.498097029 +0000 UTC
+dial tcp: lookup dinor.test on 10.0.0.10:53: no such host
+real error  dial tcp: lookup dinor.test on 10.0.0.10:53: no such host 2019-10-30 18:02:11.500541356 +0000 UTC
+dial tcp: lookup dinor.test on 10.0.0.10:53: no such host
+real error  dial tcp: lookup dinor.test on 10.0.0.10:53: no such host 2019-10-30 18:02:13.503282984 +0000 UTC
            
-           root@psgress-test-c56b94c89-7lxgg:/var/logs/pslogs# cat ps.log 
-Successfully connected!   2019-10-30 16:52:42.540544271 +0000 UTC
-Successfully connected!   2019-10-30 16:52:45.343449938 +0000 UTC
-Successfully connected!   2019-10-30 16:52:48.101259126 +0000 UTC
-Successfully connected!   2019-10-30 16:52:50.941542407 +0000 UTC
-Successfully connected!   2019-10-30 16:52:53.736711009 +0000 UTC
-Successfully connected!   2019-10-30 16:52:56.474371327 +0000 UTC
-Successfully connected!   2019-10-30 16:52:59.214423666 +0000 UTC
-Successfully connected!   2019-10-30 16:53:01.997851969 +0000 UTC
-Successfully connected!   2019-10-30 16:53:04.798042013 +0000 UTC
-Successfully connected!   2019-10-30 16:53:07.553737583 +0000 UTC
-Successfully connected!   2019-10-30 16:53:10.321969859 +0000 UTC
-Successfully connected!   2019-10-30 16:53:13.051206306 +0000 UTC
-Successfully connected!   2019-10-30 16:53:15.898775549 +0000 UTC
-Successfully connected!   2019-10-30 16:53:18.65694974 +0000 UTC
-Successfully connected!   2019-10-30 16:53:21.386101086 +0000 UTC
-Successfully connected!   2019-10-30 16:53:24.13984064 +0000 UTC
-Successfully connected!   2019-10-30 16:53:26.909439227 +0000 UTC
-Successfully connected!   2019-10-30 16:53:29.664608793 +0000 UTC
-Successfully connected!   2019-10-30 16:53:32.410120377 +0000 UTC
-
 
